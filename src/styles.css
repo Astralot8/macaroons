@@ -5,3 +5,18 @@ body {
     padding: 0;
     scroll-behavior: smooth;
 }
+
+.btn {
+    font-family: GilroyBold, sans-serif;
+    color: rgb(255, 255, 255);
+    /* background: linear-gradient(90deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%); */
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.btn:hover {
+    box-shadow: 0px 5px 9px 1px rgba(130, 19, 40, 0.5);
+}

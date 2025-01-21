@@ -1,0 +1,14 @@
+<div class="product">
+    <div class="product__image">
+        <img src="assets/images/{{product.image}}" alt="Product" class="product__image-img">
+    </div>
+    <div class="product-title">{{product.title}}</div>
+    <div class="product__order">
+        <div class="product__piece">1 шт.</div>
+        <div class="product__price">{{product.price | currency: "RUB" : "руб." : "1.2-2"}}</div>
+        
+        <div class="product__action">
+            <button class="btn product__button" buttonHover (click)="addProductToCart()">Заказать</button>
+        </div>
+    </div>
+</div>

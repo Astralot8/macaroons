@@ -1,0 +1,73 @@
+.advantage__item-number {
+    background: #821328;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 60px;
+    font-family: GilroyExtraBold, sans-serif;
+    color: #FFFFFF;
+    line-height: 0.7;
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.advantage__item-title {
+    padding-top: 13px;
+    font-size: 20px;
+    font-family: GilroyExtraBold, sans-serif;
+    color: rgb(51, 25, 7);
+    padding-bottom: 20px;
+}
+
+.advantage__text {
+    font-size: 15px;
+    font-family: GilroyMedium, sans-serif;
+    color: rgb(51, 25, 7);
+    line-height: 1.333;
+}
+
+.advantage:hover .advantage__item-number {
+    background: #eba8b1;
+    color: rgb(130, 19, 40);
+}
+
+/*от 768 до 1023*/
+@media screen and (max-width: 1023px) {
+    .advantage {
+        text-align: center;
+        max-width: 230px;
+    }
+
+    .advantage__item-number {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .advantage {
+        text-align: center;
+        max-width: 165px;
+    }
+
+    .advantage__item-title {
+        padding-top: 14px;
+        font-size: 18px;
+        padding-bottom: 23px;
+    }
+
+    .advantage__text {
+        font-size: 15px;
+        line-height: 1.385;
+    }
+}
+
+@media screen and (max-width: 374px) {
+
+    .advantage__item-title {
+        height: 30px;
+    }
+}

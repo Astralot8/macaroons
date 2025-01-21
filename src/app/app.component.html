@@ -1,199 +1,181 @@
 <header class="header">
-  <article class="container header__container">
-      <div class="logo" id="logo">
-          <img src="assets/images/macaroonsLogo.png">
-      </div>
-      <nav class="header__menu" #headerMenu>
-          <div class="close" (click)="closeMenu(headerMenu)">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
-                  <g>
-                      <g>
-                          <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+    <article class="container header__container">
+        <div class="logo" id="logo">
+            <img src="assets/images/macaroonsLogo.png">
+        </div>
+        <nav class="header__menu" #headerMenu>
+            <div class="close" (click)="closeMenu(headerMenu)">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492 492"
+                    style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
                               c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
                               c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
                               L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
                               c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
                               c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
-                              c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
-                      </g>
-                  </g>
-              </svg>
-          </div>
-          <ul class="menu__list">
-              <li class="menu__item">
-                  <a  (click)="scrollTo(productsElement)" (click)="closeMenu(headerMenu)" class="menu__link">Пироженки</a>
-              </li>
-              <li class="menu__item">
-                  <a  (click)="scrollTo(advantagesElement)" (click)="closeMenu(headerMenu)" class="menu__link">О нас</a>
-              </li>
-              <li class="menu__item">
-                  <a  (click)="scrollTo(orderElement)" (click)="closeMenu(headerMenu)" class="menu__link">Оформить заказ</a>
-              </li>
-          </ul>
-      </nav>
-      <div class="phone header__phone">
-          +375 (29) 368-98-68
-      </div>
-      <div class="header__burger" id="header__burger" (click)="openMenu(headerMenu)">
-          <svg 
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              width="40px" height="22px">
-              <path fill-rule="evenodd"  fill="rgb(130, 19, 40)"
-              d="M0.000,-0.000 L40.000,-0.000 L40.000,2.000 L0.000,2.000 L0.000,-0.000 Z"/>
-              <path fill-rule="evenodd"  fill="rgb(130, 19, 40)"
-              d="M0.000,10.000 L40.000,10.000 L40.000,12.000 L0.000,12.000 L0.000,10.000 Z"/>
-              <path fill-rule="evenodd"  fill="rgb(130, 19, 40)"
-              d="M0.000,20.000 L40.000,20.000 L40.000,22.000 L0.000,22.000 L0.000,20.000 Z"/>
-          </svg>
-      </div>
-  </article>
+                              c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a (click)="scrollTo(productsElement)" (click)="closeMenu(headerMenu)"
+                        class="menu__link">Пироженки</a>
+                </li>
+                <li class="menu__item">
+                    <a (click)="scrollTo(advantagesElement)" (click)="closeMenu(headerMenu)" class="menu__link">О
+                        нас</a>
+                </li>
+                <li class="menu__item">
+                    <a (click)="scrollTo(orderElement)" (click)="closeMenu(headerMenu)" class="menu__link">Оформить
+                        заказ</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="phone header__phone">
+            {{footerValues.phone | phoneModification}}
+        </div>
+        <div class="header__burger" id="header__burger" (click)="openMenu(headerMenu)">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px"
+                height="22px">
+                <path fill-rule="evenodd" fill="rgb(130, 19, 40)"
+                    d="M0.000,-0.000 L40.000,-0.000 L40.000,2.000 L0.000,2.000 L0.000,-0.000 Z" />
+                <path fill-rule="evenodd" fill="rgb(130, 19, 40)"
+                    d="M0.000,10.000 L40.000,10.000 L40.000,12.000 L0.000,12.000 L0.000,10.000 Z" />
+                <path fill-rule="evenodd" fill="rgb(130, 19, 40)"
+                    d="M0.000,20.000 L40.000,20.000 L40.000,22.000 L0.000,22.000 L0.000,20.000 Z" />
+            </svg>
+        </div>
+    </article>
 </header>
 
 <section class="main">
-  <article class="container main__container">
-      <div class="main__info">
-          <h1 class="main__title">
-              Мягкие французские пироженки Macaroons
-          </h1>
-          <div class="main__description">
-              Побалуйте себя и своих близких самыми вкусными и ароматными домашними пироженками Macaroon!
-          </div>
-          <div class="main__action">
-              <button class="btn main__button" (click)="scrollTo(productsElement)">Выбрать макарун</button>
-          </div>
-          <div class="main__image">
-              <div class="main__pulse-image">
-                  <img src="assets/images/macaroonsSet.png" alt="Macaroon Set" class="main__image-img">
-              </div>
-          </div>
-      </div>
-  </article>
+    <article class="container main__container">
+        <div class="main__info">
+            <h1 class="main__title">
+                Мягкие французские пироженки Macaroons
+            </h1>
+            <div class="main__description">
+                Побалуйте себя и своих близких самыми вкусными и ароматными домашними пироженками Macaroon!
+            </div>
+            <div class="main__action">
+                <button class="btn main__button" buttonHover 
+                (click)="scrollTo(productsElement)">Выбрать макарун</button>
+            </div>
+            <div class="main__image">
+                <div class="main__pulse-image">
+                    <img src="assets/images/macaroonsSet.png" alt="Macaroon Set" class="main__image-img">
+                </div>
+            </div>
+        </div>
+    </article>
 </section>
 
 <section #advantagesElement class="advantages">
-  <article class="container advantages__container">
-      <div class="advantages__info">
-          <h2  class="advantages__title">
-              Мы печём для вас вкуснейшие макаруны уже более 10 лет
-          </h2>
-          <div class="advantages__description">
-              Все пироженки мы готовим только из натуральных и качественных продуктов, без консервантов, ароматизаторов, красителей. Используем в приготовлении сливочное масло 82,5%, без дрожжей, маргарина, разрыхлителей и улучшителей муки.
-          </div>
-          <div class="advantages__image">
-              <img src="assets/images/macaroonBig.png" alt="Big macaroon" class="advantages__image-img">
-          </div>
-      </div>
-      <div class="advantages__items">
-          <div class="advantage" *ngFor="let advantage of advantages; let i = index">
-              <div class="advantage__item-number">
-                  {{i+1}}
-              </div>
-              <div class="advantage__item-title">
-                  {{advantage.title}}
-              </div>
-              <div class="advantage__text">
-                  {{advantage.text}}
-              </div>
-          </div>
-          
-         
-          
-      </div>
-  </article>
+    <article class="container advantages__container">
+        <div class="advantages__info">
+            <h2 class="advantages__title">
+                Мы печём для вас вкуснейшие макаруны уже более 10 лет
+            </h2>
+            <div class="advantages__description">
+                Все пироженки мы готовим только из натуральных и качественных продуктов, без консервантов,
+                ароматизаторов, красителей. Используем в приготовлении сливочное масло 82,5%, без дрожжей, маргарина,
+                разрыхлителей и улучшителей муки.
+            </div>
+            <div class="advantages__image">
+                <img src="assets/images/macaroonBig.png" alt="Big macaroon" class="advantages__image-img">
+            </div>
+        </div>
+        <div class="advantages__items">
+            <advantages *ngFor="let advantage of advantages; let i = index" [advantage]="advantage"></advantages>
+        </div>
+    </article>
 </section>
 
 <section #productsElement class="products">
-  <article class="container products__container">
-      <h2 class="products__title">Выберите свой макарун</h2>
-      <div class="products__items">
-          <div class="product" *ngFor="let product of products; let i = index">
-              <div class="product__image">
-                  <img src="assets/images/{{product.image}}" alt="Product {{i+1}}" class="product__image-img">
-              </div>
-              <div class="product-title">{{product.title}}</div>
-              <div class="product__order">
-                  <div class="product__piece">1 шт.</div>
-                  <div class="product__price">{{product.price}} руб.</div>
-                  <div class="product__action">
-                      <button class="btn product__button" (click)="addToCart(product, orderElement)">Заказать</button>
-                  </div>
-              </div>
-          </div>
-         
-      </div>
-  </article>
+    <article class="container products__container">
+        <h2 class="products__title">Выберите свой макарун</h2>
+        <div class="products__items">
+            <products class="product" *ngFor="let product of products; let i = index" [product]="product"
+                (addToCartEvent)="addToCart($event, orderElement)"></products>
+        </div>
+    </article>
 </section>
 
 <section #orderElement class="order">
-  <article class="container order__container">
-      
-          <img src="assets/images/strawberry1.png" alt="strawberry1" class="order__back-image-img1">
-          <img src="assets/images/strawberry2.png" alt="strawberry2" class="order__back-image-img2">
-      
-      <div class="order__image">
-          <img src="assets/images/macaroonOrder.png" alt="Macaroons" class="order__image-img">
-      </div>
-      <div class="order__form-info">
-          <h2 class="order__title">
-              Закажите макарун!
-          </h2>
-          <div class="order__text-message">
-              Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!
-          </div>
-          <form class="order__form">
-              <div class="order__form-item">
-                  <div class="order__form-item-text1">
-                      Ваш выбор
-                  </div>
-                  <input type="text" class="base-input order__base-input" placeholder="Напишите, что хотите заказать..." [(ngModel)]="formValues.productTitle" name="productTitle">
-              </div>
-              <div class="order__form-action">
-                  <div class="order__form-item-text2">
-                      Заполните данные для заказа
-                  </div>
-                  <input type="text" class="base-input order__base-input" placeholder="Ваше имя" [(ngModel)]="formValues.name" name="name">
-                  <input type="number" class="base-input order__base-input" placeholder="+375 (__) ___ - __ - __" [(ngModel)]="formValues.phone" name="phone">
-                  <div class="form__action">
-                      <button class="btn order__button">Оформить заказ</button>
-                  </div>
-              </div>
-          </form>
-      </div>
-  </article>
+    <article class="container order__container">
+
+        <img src="assets/images/strawberry1.png" alt="strawberry1" class="order__back-image-img1">
+        <img src="assets/images/strawberry2.png" alt="strawberry2" class="order__back-image-img2">
+
+        <div class="order__image">
+            <img src="assets/images/macaroonOrder.png" alt="Macaroons" class="order__image-img">
+        </div>
+        <div class="order__form-info">
+            <h2 class="order__title">
+                Закажите макарун!
+            </h2>
+            <div class="order__text-message">
+                Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!
+            </div>
+            <form class="order__form">
+                <div class="order__form-item">
+                    <div class="order__form-item-text1">
+                        Ваш выбор
+                    </div>
+                    <input type="text" class="base-input order__base-input"
+                        placeholder="Напишите, что хотите заказать..." [(ngModel)]="formValues.productTitle"
+                        name="productTitle">
+                </div>
+                <div class="order__form-action">
+                    <div class="order__form-item-text2">
+                        Заполните данные для заказа
+                    </div>
+                    <input type="text" class="base-input order__base-input" placeholder="Ваше имя"
+                        [(ngModel)]="formValues.name" name="name">
+                    <input type="number" class="base-input order__base-input" placeholder="+375 (__) ___ - __ - __"
+                        [(ngModel)]="formValues.phone" name="phone">
+                    <div class="form__action">
+                        <button class="btn order__button" buttonHover>Оформить заказ</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </article>
 </section>
 
 <footer class="footer">
-  <article class="container footer__container">
-      <div class="footer__logo">
-          <img src="assets/images/macaroonsLogo.png" alt="Logo" class="footer__logo-img">
-          <div class="footer__right">
-              Все права защищены, 2020
-          </div>
-      </div>
-      <div class="footer__right2">
-          Все права защищены, 2020
-      </div>
-      <div class="footer__image">
-          <a href={{footerValues.link}} class="footer__link">
-              <img src="assets/images/insta.png" alt="Insta" class="footer__image-img">
-          </a>
-      </div>
-      <div class="phone footer__phone">
-          {{footerValues.phone}}
-      </div>
-      <div class="gift" *ngIf="showPresent">
-          <div class="gift__text">
-              Оформите заказ 
-              <br>
-              и получите подарок!
-          </div>
-          <div class="gift__icon">
-              <img src="assets/images/present.png" alt="gift" class="gift__icon-img">
-          </div>
+    <article class="container footer__container">
+        <div class="footer__logo">
+            <img src="assets/images/macaroonsLogo.png" alt="Logo" class="footer__logo-img">
+            <div class="footer__right">
+                Все права защищены, 2020
+            </div>
+        </div>
+        <div class="footer__right2">
+            Все права защищены, 2020
+        </div>
+        <div class="footer__image">
+            <a href={{footerValues.link}} class="footer__link">
+                <img src="assets/images/insta.png" alt="Insta" class="footer__image-img">
+            </a>
+        </div>
+        <div class="phone footer__phone">
+            {{footerValues.phone | phoneModification}}
+        </div>
+        <div class="gift" *ngIf="showPresent">
+            <div class="gift__text">
+                {{this.cartService.amount  | currency: "RUB" : "руб." : "1.2-2"}}
+            </div>
+            <div class="gift__icon">
+                <img src="assets/images/cart.png" alt="gift" class="gift__icon-img">
+                <div class="cart__count">{{this.cartService.count}}</div>
+            </div>
 
-      </div>
-  </article>
+        </div>
+    </article>
 </footer>
